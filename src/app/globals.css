@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --bg-paper: #fffdf7;
+  --ink: #111111;
+}
+
+@theme inline {
+  --font-display: var(--font-display), sans-serif;
+  --font-sans: var(--font-sans), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background-image: radial-gradient(#111111 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+/* Neo-Brutalist Utility Classes */
+.brutal-border {
+  border: 3px solid #111111;
+}
+
+.brutal-border-sm {
+  border: 2px solid #111111;
+}
+
+.brutal-shadow {
+  box-shadow: 5px 5px 0px #111111;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 3px 3px 0px #111111;
+}
+
+.brutal-shadow-lg {
+  box-shadow: 8px 8px 0px #111111;
+}
+
+.brutal-btn {
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0px #111111;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.brutal-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #111111;
+}
+
+.brutal-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #111111;
+}
+
+.brutal-card {
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0px #111111;
+  background-color: #ffffff;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.brutal-card-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #111111;
+}
