@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import {
   ArrowUpRight,
+  ExternalLink,
   FolderGit2,
   GitBranch,
   Layers,
@@ -149,16 +150,30 @@ export default function ProjectsSection({
               </div>
 
               {/* Action Footer */}
-              <div className="px-6 py-4 bg-[#FFFDF7] border-t-[3px] border-[#111111] flex items-center justify-between gap-2">
+              <div className="px-6 py-4 bg-[#FFFDF7] border-t-[3px] border-[#111111] flex flex-wrap items-center justify-between gap-2">
                 <span className="font-mono text-xs font-bold uppercase text-[#111111]/80 flex items-center gap-1.5">
                   <Layers className="w-3.5 h-3.5 stroke-[2.5]" />
                   {project.role}
                 </span>
 
-                <span className="px-3 py-1.5 bg-[#FFD100] brutal-border-sm font-mono text-xs font-bold uppercase inline-flex items-center gap-1 group-hover:bg-[#2EE59D] transition-colors">
-                  <span>Read Case Study</span>
-                  <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-                </span>
+                <div className="flex items-center gap-2">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="px-3 py-1.5 bg-[#2EE59D] brutal-border-sm font-mono text-xs font-bold uppercase inline-flex items-center gap-1 hover:bg-[#FFD100] transition-colors"
+                    >
+                      <span>Live Site</span>
+                      <ExternalLink className="w-3.5 h-3.5 stroke-[2.5]" />
+                    </a>
+                  )}
+                  <span className="px-3 py-1.5 bg-[#FFD100] brutal-border-sm font-mono text-xs font-bold uppercase inline-flex items-center gap-1 group-hover:bg-[#2EE59D] transition-colors">
+                    <span>Case Study</span>
+                    <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+                  </span>
+                </div>
               </div>
             </article>
           ))}

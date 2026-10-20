@@ -270,6 +270,7 @@ export const PROJECTS: ProjectCaseStudy[] = [
     ],
     architectureNotes:
       "Next.js Client (Vercel) -> REST API with JWT Bearer Auth -> Python FastAPI Server (Render) -> Supabase PostgreSQL Database.",
+    liveUrl: "https://runway-three-theta.vercel.app/login",
     repoUrl: "https://github.com/AliffWafi",
   },
   {
